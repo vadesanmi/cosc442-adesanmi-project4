@@ -53,21 +53,21 @@ public class Main {
 	    //Read in amt milk
 	    final String milkString = inputOutput("line.seperator Please enter the units of milk in the recipe: ");
 	    final int amtMilk = stringToInt(milkString);
-	    if(amtMilk < 0) {
+	    if(amtMilk <= 0) {
 	    	mainMenu();
 	    }
 	    
 	    //Read in amt sugar
 	    final String sugarString = inputOutput("line.seperator Please enter the units of sugar in the recipe: ");
 	    final int amtSugar = stringToInt(sugarString);
-	    if(amtSugar < 0) {
+	    if(amtSugar <= 0) {
 	    	mainMenu();
 	    }
 	    
 	    //Read in amt chocolate
 	    final String chocolateString = inputOutput("line.seperator Please enter the units of chocolate in the recipe: ");
 	    final int amtChocolate = stringToInt(chocolateString);
-	    if(amtChocolate < 0) {
+	    if(amtChocolate <= 0) {
 	    	mainMenu();
 	    }
 	    
