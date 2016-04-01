@@ -41,7 +41,7 @@ public class CoffeeMaker {
         //Check for an empty recipe, add recipe to first empty spot
         if(canAddRecipe) {
         	int emptySpot = -1;
-        	for(int i = 0; i <= NUM_RECIPES; i++) {
+        	for(int i = 0; i < NUM_RECIPES; i++) {
         		if(!recipeFull[i]) {
         			emptySpot = i;
         			canAddRecipe = true;
