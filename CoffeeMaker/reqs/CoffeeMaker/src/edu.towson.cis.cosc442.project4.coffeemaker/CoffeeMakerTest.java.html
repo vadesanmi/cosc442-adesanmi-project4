@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>CoffeeMakerTest.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestAll (2) (Apr 1, 2016 5:03:10 PM)</a> &gt; <a href="../../index.html" class="el_group">CoffeeMaker</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">edu.towson.cis.cosc442.project4.coffeemaker</a> &gt; <span class="el_source">CoffeeMakerTest.java</span></div><h1>CoffeeMakerTest.java</h1><pre class="source lang-java linenums">package edu.towson.cis.cosc442.project4.coffeemaker;
+
+import org.junit.Test;
+
+import junit.framework.TestCase;
+
+/**
+ *
+ */
+<span class="nc" id="L10">public class CoffeeMakerTest extends TestCase {</span>
+	private CoffeeMaker cm;
+	private Inventory i;
+	private Recipe r1;
+
+	public void setUp() {
+<span class="nc" id="L16">		cm = new CoffeeMaker();</span>
+<span class="nc" id="L17">		i = cm.checkInventory();</span>
+
+<span class="nc" id="L19">		r1 = new Recipe();</span>
+<span class="nc" id="L20">		r1.setName(&quot;Coffee&quot;);</span>
+<span class="nc" id="L21">		r1.setPrice(50);</span>
+<span class="nc" id="L22">		r1.setAmtCoffee(6);</span>
+<span class="nc" id="L23">		r1.setAmtMilk(1);</span>
+<span class="nc" id="L24">		r1.setAmtSugar(1);</span>
+<span class="nc" id="L25">		r1.setAmtChocolate(0);</span>
+<span class="nc" id="L26">	}</span>
+
+	public void testAddRecipe1() {
+<span class="nc" id="L29">		assertTrue(cm.addRecipe(r1));</span>
+<span class="nc" id="L30">	}</span>
+
+	public void testDeleteRecipe1() {
+<span class="nc" id="L33">		cm.addRecipe(r1);</span>
+<span class="nc" id="L34">		assertTrue(cm.deleteRecipe(r1));</span>
+<span class="nc" id="L35">	}</span>
+
+	public void testEditRecipe1() {
+<span class="nc" id="L38">		cm.addRecipe(r1);</span>
+<span class="nc" id="L39">		Recipe newRecipe = new Recipe();</span>
+<span class="nc" id="L40">		newRecipe = r1;</span>
+<span class="nc" id="L41">		newRecipe.setAmtSugar(2);</span>
+<span class="nc" id="L42">		assertTrue(cm.editRecipe(r1, newRecipe));</span>
+<span class="nc" id="L43">	}</span>
+
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span>TestAll (2) (Apr 1, 2016 5:03:10 PM)</div></body></html>

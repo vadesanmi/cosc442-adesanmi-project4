@@ -657,6 +657,16 @@ public class CoffeeMakerTest {
 		cm.addRecipe(r1);
 		assertTrue(cm.deleteRecipe(r1));
 	}
+	
+	@Test
+//	public void testGetRecipeName5(){
+	//	String name = "FooFoo";
+		//if(r1.getName() != (r1.getName())){
+			
+		//	assertFalse(cm.getRecipeForName(name));
+
+		//}
+//	}
 	/**
 	 * Perform pre-test initialization.
 	 *
